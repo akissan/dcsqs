@@ -108,8 +108,8 @@ var sketch = new p5(function (p5) {
     }
 
     drop.changed(() => {
-      console.log(`Selected ${drop.value}`);
-      curOption = drop.value;
+      console.log(`Selected ${drop.value()}`);
+      curOption = mapping[drop.value()];
     });
 
     button.mousePressed(() => p5.saveCanvas(cnv, drop.value(), "png"));
